@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to HTML5, CSS, Javascript</h1>
+    <h1 class="hidden">Welcome to HTML5, CSS, Javascript</h1>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll('h1');
+            const colors = ['#FF5733', '#33FF57', '#3357FF', '#F333FF', '#33FFF3'];
+            let index = 0;
+
+            function showNextElement() {
+                if (index > 0) {
+                    elements[index - 1].classList.add('hidden');
+                }
+                elements[index].classList.remove('hidden');
+                document.body.style.backgroundColor = colors[index % colors.length];
+                index = (index + 1) % elements.length;
+            }
+
+            setInterval(showNextElement, 3000);
+            showNextElement(); // Show the first element immediately
+        });
+    </script>
 </body>
 </html>
