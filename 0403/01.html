@@ -20,12 +20,45 @@
       <tr>
         <td>성별: </td>
         <td>
-          <input type ="radio" name="gender" id="male" value="m">
+          <input type ="radio" name="gender" id="male" label="m">
           <label for="male">남성</label>
-          <input type ="radio" name="gender" id="female" value="f">
+          <input type ="radio" name="gender" id="female" label="f">
           <label for="female">여성</label>
         </td>
       </tr>
+      <tr>
+        <td>
+          관심분야:
+        </td>
+        <>
+          <select name="interest" multiple>
+            <optgroup label="sports">스포츠</optgroup>
+            <optgroup label="music">영화</optgroup>
+            <optgroup label="game">게임</optgroup>
+            <optgroup label="movie">영화</optgroup>
+          </select>
+          <tr>
+            <td>
+              관심분야(항목 그룹화):
+            </td>
+            <td>
+              <select name="interest">
+                <optgroup label="스포츠"></optgroup>
+                  <option value="Soccer">축구</option>
+                  <option value="Baseball">야구</option>
+                  <option value="Basketball">농구</option>
+                <optgroup label="음악"></optgroup>
+                  <option value="Soccer">팝</option>
+                  <option value="Rock">락</option>
+                  <option value="Classic">클래식</option>
+                <optgroup label="게임">게임</optgroup>
+                <optgroup label="영화">영화</optgroup>
+              </select>
+            </td>
+          </tr>
+        
+      </tr>
+      <tr>
       <tr align="center">
         <td colspan="2">
           <button type="submit">가입</button>
