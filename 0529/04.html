@@ -23,12 +23,18 @@
 			img.src = select.options[index].value;
 			img.width = 600;
 		}
+		function cheerup(){
+			//사용자 정의 속성을 body요소 객체에 설정
+			document.body.setAttribute("data-cheerup", "여자친구 Gfriend!");
+			alert(document.body.getAttribute("data-cheerup"));
+		}
 	</script>
 </head>
 <body>
 	<hr>
 	<button onclick="changeImage()">이미지 선택</button>
 	<button onclick="reset()">Reset</button>
+	<button onclick="cheerup()">Cheerup</button>
 	<br>
 	<select onchange="selectedChangeImage()">
 		<option value="">Select an Image</option>
