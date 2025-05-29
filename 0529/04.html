@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		let img;
+		function changeImage(){
+			img = document.getElementById("img1");
+			img.src = "imgs/여자친구.png";
+			img.width = 600;
+		}
+		function reset(){
+			img.src = "";
+			img.width = 0;
+		}
+
+		function selectedChangeImage(){
+			let select = document.querySelector("select");
+			let img = document.getElementById("img1");
+			let index = select.selectedIndex;
+			img.src = select.options[index].value;
+			img.width = 600;
+		}
+	</script>
+</head>
+<body>
+	<hr>
+	<button onclick="changeImage()">이미지 선택</button>
+	<button onclick="reset()">Reset</button>
+	<br>
+	<select onchange="selectedChangeImage()">
+		<option value="">Select an Image</option>
+		<option value="imgs/여자친구.png">여자친구</option>
+		<option value="imgs/장원영.jpg">장원영</option>
+		<option value="imgs/초원.png">초원</option>
+		<option value="imgs/유주.jpg">유주</option>
+	</select>
+	<hr>
+	<img id="img1">
+</body>
+</html>
