@@ -28,9 +28,20 @@
 			document.body.setAttribute("data-cheerup", "여자친구 Gfriend!");
 			alert(document.body.getAttribute("data-cheerup"));
 		}
+		function setClock(){
+			let now = new Date();
+			clock.innerHTML = now.toString();
+		}
+		let clock;
+		function callSetClock(){
+			clock = document.querySelector("h1");
+			setClock();
+			setInterval(setClock, 1000);
+			
+		}
 	</script>
 </head>
-<body>
+<body onload="callSetClock()">
 	<hr>
 	<button onclick="changeImage()">이미지 선택</button>
 	<button onclick="reset()">Reset</button>
@@ -45,5 +56,7 @@
 	</select>
 	<hr>
 	<img id="img1">
+	<hr>
+	<h1></h1>
 </body>
 </html>
