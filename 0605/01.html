@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		function callAlert(){
+			alert('알림 메시지');
+		}
+		function overImage(img1){
+			img1.src = "imgs/여자친구.png";
+		}
+		function outImage(img1){
+			img1.src = "imgs/초원.png";
+		}
+		function overImage(){
+			let img1 = document.getElementById("img3");
+			img1.src = "imgs/초원.png";
+		}
+	</script>
+</head>
+<body>
+<button onclick="callAlert()">알림 메시지</button>
+<br><br>
+<img src="imgs/여자친구.png" onmouseover="this.src='imgs/초원.png'" onmouseout="this.src='imgs/장원영.jpg'"/>
+<br><br>
+<img src="imgs/유주.jpg" onmouseover="overImage(this)" onmouseout="outImage(this)"/>
+<br><br>
+<img src="imgs/장원영.jpg" onmouseover="overImageId()" onmouseout="outImageId()" id="img3"/>
+</body>
+</html>
