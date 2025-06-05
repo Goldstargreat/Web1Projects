@@ -23,11 +23,15 @@
 			img1.src = "imgs/여자친구.png";
 		}
 		function IncrementStar(btn){
-			btn.textContent = btn.textContent + "★";
+			btn.textContent += "★";
+		}
+		function removeDefault(){
+			event.preventDefault(); // Prevent default action of the link 
 		}
 	</script>
 </head>
 <body>
+	<a href="../0529/03.html" onclick="removeDefault()">자바스크립트 연습</a>
 <button onclick="callAlert()">알림 메시지</button>
 <br><br>
 <button onclick="IncrementStar(this)">버튼 - </button>
