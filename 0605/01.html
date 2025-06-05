@@ -14,14 +14,23 @@
 		function outImage(img1){
 			img1.src = "imgs/초원.png";
 		}
-		function overImage(){
+		function overImageId(){
 			let img1 = document.getElementById("img3");
-			img1.src = "imgs/초원.png";
+			img1.src = "imgs/유주.jpg";
+		}
+		function outImageId(){
+			let img1 = document.getElementById("img3");
+			img1.src = "imgs/여자친구.png";
+		}
+		function IncrementStar(btn){
+			btn.textContent = btn.textContent + "★";
 		}
 	</script>
 </head>
 <body>
 <button onclick="callAlert()">알림 메시지</button>
+<br><br>
+<button onclick="IncrementStar(this)">버튼 - </button>
 <br><br>
 <img src="imgs/여자친구.png" onmouseover="this.src='imgs/초원.png'" onmouseout="this.src='imgs/장원영.jpg'"/>
 <br><br>
