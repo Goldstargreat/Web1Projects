@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+	$(document).ready(
+	function(){
+		$("#btn1").click(
+			function(){
+					$("#content1").fadeToggle('slow');
+				}
+			)
+		}
+	);
+	</script>
+</head>
+<body>
+	
+</body>
+<button id = "btn1">Visual Effect</button>
+<br>
+<!-- fade1 메소드를 사용하며려면 div 요소에 display:none으로 css를 적용해야 효과를 볼 수 있다.  -->
+<div id ="content1">
+	<h1>Lorem ipsum, dolor sit</h1>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit odio ipsam nostrum sapiente, distinctio necessitatibus ipsa totam voluptates quasi quam iure sit ab neque exercitationem beatae dicta, magni eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit odio ipsam nostrum sapiente, distinctio necessitatibus ipsa totam voluptates quasi quam iure sit ab neque exercitationem beatae dicta, magni eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit odio ipsam nostrum sapiente, distinctio necessitatibus ipsa totam voluptates quasi quam iure sit ab neque exercitationem beatae dicta, magni eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit odio ipsam nostrum sapiente, distinctio necessitatibus ipsa totam voluptates quasi quam iure sit ab neque exercitationem beatae dicta, magni eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit odio ipsam nostrum sapiente, distinctio necessitatibus ipsa totam voluptates quasi quam iure sit ab neque exercitationem beatae dicta, magni eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit odio ipsam nostrum sapiente, distinctio necessitatibus ipsa totam voluptates quasi quam iure sit ab neque exercitationem beatae dicta, magni eius! </p>
+</div>
+</html>
