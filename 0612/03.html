@@ -8,9 +8,11 @@
 	<script>
 		$(document).ready(
 			function () {
-				$("h1:nth-child(1)").text("<a href='https://www.kopo.ac.kr/'>Korea Technics</a>");
-				$("h1:nth-child(2)").html("<a href='https://www.kopo.ac.kr/'>Korea Technics</a>");
+				let text = $("h1").text();
+				let html = $("h1").html();
 
+				alert("text():" + text);
+				alert("text():" + html);
 		}
 	);
 	</script>
