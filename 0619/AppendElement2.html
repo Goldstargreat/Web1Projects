@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			let i = 0; // 생성된 요소 개수 카운트 초기에는 0으로 설정한다. 
+
+			$('#createBtn').click(function () {
+				
+					$('<h1>New Create Element ' + i + '</h1>').css({
+						backgroundColor: 'cyan',
+						color: 'white',
+					}).appendTo('body');
+					i = i + 1;
+				
+			});
+		});
+	</script>
+</head>
+<body>
+	<button id="createBtn">Add H1 Element</button>
+</body>
+</html>
