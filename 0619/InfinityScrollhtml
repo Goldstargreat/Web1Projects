@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// 스크롤 시 추가할 요소 생성 함수
+			let appendDocument = function () {
+				for (let i = 0; i < 20; i++) {
+					$('<h1>Infinity Scroll</h1>').css({
+						backgroundColor: 'yellow',
+						color: 'black',
+					}).appendTo('body');
+				}
+			};
+
+			// 페이지 로드 시 초기 콘텐츠 생성
+			appendDocument();
+
+			// 스크롤 이벤트
+			$(window).scroll(function () {
+				let scrollHeight = $(window).scrollTop() + $(window).height();
+				let documentHeight = $(document).height();
+
+				if (scrollHeight == documentHeight) { // 오차 보정
+					appendDocument();
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+</body>
+</html>
