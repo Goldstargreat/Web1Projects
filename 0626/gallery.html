@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Slider Gallery</title>
     <style>
         div.item:nth-child(1) { background: blueviolet; }
@@ -11,8 +12,8 @@
     <script>
         $(document).ready(function () {
             // 변수를 선언합니다.
-            let width = $('[data-role="slider"]').attr('data-width'); //500
-            let height = $('[data-role="slider"]').attr('data-height'); // 300
+            let width = Number($('[data-role="slider"]').attr('data-width')); //500
+            let height = Number($('[data-role="slider"]').attr('data-height')); // 300
             let count = $('[data-role="slider"] div.item').length; //3
 
             // 스타일을 적용합니다.
